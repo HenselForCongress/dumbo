@@ -1,0 +1,60 @@
+data = {
+    "event": "donation_completed",
+    "payload": {
+        "submission_id": str(uuid.uuid4()),
+        "donation": {
+            "id": str(uuid.uuid4().hex),
+            "donation_project": "",
+            "products": [
+                {
+                    "internal_identifier": str(uuid.uuid4().hex[:4]),
+                    "name": fake.word().capitalize()
+                }
+            ],
+            "fees": {
+                "anedot_fees": {
+                    "amount": str(fees_amount)
+                },
+                "vendor_fees": []
+            }
+        },
+        "origin": "hosted",
+        "commitment_uid": str(uuid.uuid4()),
+        "event_amount": str(amount),
+        "amount_in_dollars": str(amount),
+        "net_amount": str(net_amount),
+        "frequency": "once",
+        "action_page_id": str(uuid.uuid4()),
+        "action_page_name": "New Donation Page",
+        "donor_profile_id": "",
+        "payment_method_id": str(uuid.uuid4()),
+        "created_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC'),
+        "updated_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC'),
+        "address_line_1": fake.street_address(),
+        "address_line_2": "",
+        "address_city": city,
+        "address_region": state,
+        "address_postal_code": zip_code,
+        "address_country": "US",
+        "email": fake.email(),
+        "phone": fake.phone_number(),
+        "first_name": fake.first_name(),
+        "last_name": fake.last_name(),
+        "middle_name": fake.first_name(),
+        "occupation": fake.job(),
+        "employer_name": fake.company(),
+        "title": fake.job(),
+        "suffix": "",
+        "ip_address": fake.ipv4(),
+        "recurring": "true",
+        "is_recurring_commitment": "true",
+        "referrer": "https://secure.anedot.com/example/slug",
+        "referrer_to_form": "",
+        "custom_field_responses": {
+            "opt_one": "Option One"
+        },
+        "communications_consent_email": "",
+        "communications_consent_phone": "",
+        "currently_employed": ""
+    }
+}

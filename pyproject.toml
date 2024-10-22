@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dumbo"
+version = "0.1.0"
+description = "Is fly at generating test data"
+authors = ["Bentley Hensel <bentleyhensel@gmail.com>"]
+license = "agpl-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+faker = "^24.11.0"
+pandas = "^2.2.2"
+pyyaml = "^6.0.1"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
